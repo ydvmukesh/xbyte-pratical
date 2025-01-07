@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+
+:root {
+  --primary-color: 72, 43, 231;
+  --secondary-color: 233, 58, 125;
+  --white-color: 255, 255, 255;
+  --black-color: 0, 0, 0;
+  /* font size */
+  --fs-16: clamp(14px, 1.2vw, 16px);
+  --fs-18: clamp(15px, 1.4vw, 18px);
+  --fs-20: clamp(16px, 1.6vw, 20px);
+  --fs-22: clamp(16px, 1.6vw, 22px);
+  --fs-24: clamp(18px, 2vw, 24px);
+  --fs-72: clamp(28px, 6vw, 72px);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: "DM Sans", serif;
+}
+
+/* reset css */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+svg,
+picture,
+video {
+  -o-object-fit: cover;
+  object-fit: cover;
+  shape-margin: 1rem;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+/*---------------- btns css---------- */
+.btns {
+  font-size: clamp(16px, 1.4vw, 18px);
+  display: inline-block;
+  font-weight: 500;
+  line-height: normal;
+  padding-block: clamp(12px, 1vw, 16.67px);
+  padding-inline: clamp(25px, 3vw, 35px);
+  border-radius: 100px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  /* for background change on hover base */
+  --_hover-bg: var(--bg-hover, rgba(var(--primary-color), 1));
+  --_hover-text: var(--text-hover, #000);
+}
+
+.btns:hover {
+  background-color: var(--_hover-bg);
+  border-color: var(--_hover-bg);
+}
+
+.btn_primary {
+  color: rgba(var(--white-color), 1);
+  background-color: rgba(var(--primary-color), 1);
+  border: 2px solid rgba(var(--primary-color), 1);
+
+  /* background change on hover */
+  --bg-hover: rgba(var(--secondary-color), 0.9);
+}
+
+/* header css-------------------------- */
+header .navbar {
+  padding-block: clamp(20px, 5.3vw, 80px);
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../images/hamburger.svg);
+}
+
+header .nav-link {
+  color: rgba(var(--white-color), 1);
+  font-size: var(--fs-18);
+  font-weight: 500;
+}
+
+header .navbar-nav .nav-link.active,
+header .nav-link:focus,
+header .nav-link:hover {
+  color: rgba(var(--white-color), 0.3);
+}
+
+header .nav-link:hover img {
+  opacity: .7;
+}
+
+/* hero banner css-------------------------------- */
+.main-wrapper {
+  background-image: url("../images/hero-banner-bg.webp"),
+    linear-gradient(to right, #2f1893, #2f1893);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.hero-section {
+  max-height: calc(100vh - 10vh);
+  height: calc(100vh - clamp(78px, 20vw, 203px));
+}
+
+.hero-item {
+  max-width: 736px;
+  margin-inline: auto;
+  gap: clamp(12px, 8px + 1.3vw, 28px);
+  /* padding-top: 62px; */
+}
+
+.hero-subtitle {
+  font-size: var(--fs-24);
+}
+
+.hero-title {
+  font-size: var(--fs-72);
+}
+
+.hero-description {
+  font-size: var(--fs-22);
+  margin-bottom: 48px;
+}
+
+.hero-slider .slick-dots li {
+  width: 12px;
+  height: 12px;
+}
+
+.hero-slider .slick-dots li button:before {
+  border: 2px solid #d9d9d9;
+  border-radius: 100px;
+  font-size: 0;
+  opacity: 1;
+  width: 12px;
+  height: 12px;
+}
+
+.hero-slider .slick-dots li.slick-active button:before {
+  background-color: rgba(var(--white-color), 1);
+  opacity: 1;
+}
+
+.hero-slider.slick-dotted.slick-slider {
+  margin-bottom: clamp(20px, 2vw, 30px);
+}
+
+.hero-slider .slick-prev {
+  /* left: 0; */
+  z-index: 2;
+}
+
+.hero-slider .slick-next {
+  /* right: 0; */
+  z-index: 2;
+}
+
+.hero-slider .slick-next:before,
+.hero-slider .slick-prev:before {
+  width: 20px;
+  height: 30px;
+  display: inline-flex;
+  content: "";
+  opacity: 1;
+}
+
+/* optinal font awesome  */
+.hero-slider .slick-prev::before {
+  background: url("../images/arrow-left.svg") no-repeat center/ 12px;
+}
+
+.hero-slider .slick-next::before {
+  background: url("../images/arrow-right.svg") no-repeat center/ 12px;
+}
+
+.hero-slider .slick-arrow.slick-disabled {
+  opacity: 0.3;
+}
+
+
+/* responsive css */
+@media(max-width:767.5px) {
+
+  header .navbar-nav .nav-link.active,
+  header .nav-link:focus,
+  header .nav-link:hover {
+    color: rgba(var(--primary-color), 1);
+  }
+
+  header .nav-link {
+    color: rgba(var(--black-color), 1);
+  }
+
+  .hero-slider .slick-dots {
+    bottom: 0;
+  }
+}
