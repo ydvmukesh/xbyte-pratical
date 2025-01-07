@@ -228,3 +228,6 @@ header .nav-link:hover img {
     bottom: 0;
   }
 }
+@media screen and (orientation:landscape) {
+  height: calc(100dvh + 22vh);
+}
