@@ -130,8 +130,8 @@ header .nav-link:hover img {
 }
 
 .hero-section {
-  max-height: calc(100vh - 10vh);
-  height: calc(100vh - clamp(78px, 20vw, 203px));
+  max-height: calc(100dvh - 10vh);
+  height: calc(100dvh - clamp(78px, 20vw, 203px));
 }
 
 .hero-item {
