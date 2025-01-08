@@ -2,6 +2,7 @@
 
 :root {
   --primary-color: 72, 43, 231;
+  --primary-color2: 47, 24, 147;
   --secondary-color: 233, 58, 125;
   --green-color: 37, 218, 197;
   --blue-color: 29, 161, 242;
@@ -139,8 +140,7 @@ p:not(:last-child) {
 }
 
 .btn_md {
-  padding-block: clamp(11px, .8vw, 11px);
-
+  padding-block: clamp(11px, 0.8vw, 11px);
 }
 
 .btns:hover {
@@ -187,7 +187,7 @@ p:not(:last-child) {
 .btn_outline_light {
   color: rgba(var(--white-color), 1);
   background-color: rgba(var(--white-color), 0);
-  border: 2px solid rgba(var(--white-color), .5);
+  border: 2px solid rgba(var(--white-color), 0.5);
 
   /* background change on hover */
   --bg-hover: rgba(var(--secondary-color), 0.9);
@@ -199,8 +199,8 @@ p:not(:last-child) {
   padding-block: 20px;
   -webkit-backdrop-filter: blur(34px);
   backdrop-filter: blur(34px);
-  border: 1px solid hsla(0, 0%, 100%, .1);
-  background-color: rgba(15, 12, 23, .14);
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  background-color: rgba(15, 12, 23, 0.14);
   z-index: 99;
   position: fixed;
   width: 100%;
@@ -209,14 +209,13 @@ p:not(:last-child) {
 
 @keyframes smoothScroll {
   0% {
-    transform: translateY(-40px)
+    transform: translateY(-40px);
   }
 
   to {
-    transform: translateY(0)
+    transform: translateY(0);
   }
 }
-
 
 .offcanvas {
   height: 100vh;
@@ -258,7 +257,9 @@ header .nav-link:hover img {
 
 .main-wrapper {
   background-image: url("../images/hero-banner-bg.webp"),
-    linear-gradient(to right, #2f1893, #2f1893);
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -349,7 +350,9 @@ header .nav-link:hover img {
 /* powerful-generator css----------------- */
 .powerful-generator {
   background-image: url("../images/powerful-generator-bg.png"),
-    linear-gradient(to right, #2f1893, #2f1893);
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -358,7 +361,9 @@ header .nav-link:hover img {
 /* features  css----------------- */
 .features {
   background-image: url("../images/feature-bg.png"),
-    linear-gradient(to right, #2f1893, #2f1893);
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -369,16 +374,16 @@ header .nav-link:hover img {
   flex: 0 1 40%;
 }
 
-
 .features-slider .slick-slide>div {
   overflow: hidden;
 }
 
-
 /* form css ---------------------------*/
 .contact-form {
   background-image: url("../images/form-bg.png"),
-    linear-gradient(to right, #2f1893, #2f1893);
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -387,7 +392,6 @@ header .nav-link:hover img {
 .form-container {
   background: rgba(var(--white-color), 1);
   border-radius: 10px;
-
 }
 
 .form-container .nav-item {
@@ -396,9 +400,9 @@ header .nav-link:hover img {
 }
 
 .form-container .nav-link.active {
-  color: #1E0E62;
+  color: #1e0e62;
   border: 0;
-  border-bottom: 3px solid #1E0E62;
+  border-bottom: 3px solid #1e0e62;
 }
 
 .form-container .nav-link {
@@ -408,21 +412,19 @@ header .nav-link:hover img {
   font-size: 14px;
   text-transform: uppercase;
   border: 0;
-  border-bottom: 3px solid #EBEAED;
+  border-bottom: 3px solid #ebeaed;
   color: #15143966;
-
 }
-
 
 .form-container .tab-content {
   padding: clamp(30px, 5vw, 70px);
-
 }
 
-.form-container .form-control {
+.form-control,
+.form-select {
   height: 50px;
   border-radius: 100px;
-  border: 2px solid #EBEAED;
+  border: 2px solid #ebeaed;
   padding: 0 20px;
 }
 
@@ -473,11 +475,11 @@ header .nav-link:hover img {
 /* client css----- */
 
 .client-section {
-  background-color: #1E0E62;
+  background-color: #1e0e62;
 }
 
 .client-card {
-  border: 1px solid rgba(var(--white-color), .5);
+  border: 1px solid rgba(var(--white-color), 0.5);
   border-radius: 10px;
   padding: clamp(24px, 2.3vw, 34px);
   display: flex;
@@ -515,16 +517,17 @@ header .nav-link:hover img {
   font-weight: 500;
   margin-top: 5px;
   font-size: var(--fs-14);
-  color: rgba(var(--white-color), .3);
+  color: rgba(var(--white-color), 0.3);
   text-transform: uppercase;
-  ;
   /* Light gray for names */
 }
 
 /* call to action ----------------------- */
 .call-to-action {
   background-image: url("../images/call-to-action-bg.png"),
-    linear-gradient(to right, #2f1893, #2f1893);
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -552,7 +555,7 @@ header .nav-link:hover img {
   display: block;
   width: 80px;
   height: 80px;
-  background: #EA3223;
+  background: #ea3223;
   border-radius: 50%;
   animation: pulse-border 1100ms ease-out infinite;
 }
@@ -567,7 +570,7 @@ header .nav-link:hover img {
   display: block;
   width: 70px;
   height: 70px;
-  background: #EA3223;
+  background: #ea3223;
   border-radius: 50%;
   transition: all 200ms;
 }
@@ -597,19 +600,82 @@ header .nav-link:hover img {
   }
 }
 
+/* showcase-section ------------ */
+.showcase-section {
+  background-color: rgba(var(--primary-color2), 1);
+}
+
+/* contact --------------- */
+.contact-section {
+  background-image: url("../images/contact-bg.png"),
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contact-info p {
+  margin-bottom: 1rem;
+}
+
+.contact-address * {
+  display: flex;
+}
+
+.contact-info i {
+  min-width: 30px;
+  margin-top: 6px;
+}
+
+.contact-section .contact-form {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  padding: clamp(20px, 3vw, 48px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.form-label {
+  font-size: 14px;
+  color: #1E0E62;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.form-check-label {
+  font-size: 14px;
+  accent-color: rgba(var(--green-color), 1);
+}
+
+.form-check-input:checked {
+  background-color: rgba(var(--green-color), 1);
+  border-color: rgba(var(--green-color), 1);
+  ;
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+}
+
 /* pricing css-------------------- */
 
 .pricing-section {
   text-align: center;
   background-image: url("../images/pricing-bg.png"),
-    linear-gradient(to right, #2f1893, #2f1893);
+    linear-gradient(to right,
+      rgba(var(--primary-color2), 1),
+      rgba(var(--primary-color2), 1));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .pricing-card {
-  border: 2px solid rgba(var(--white-color), .3);
+  border: 2px solid rgba(var(--white-color), 0.3);
   border-radius: 10px;
   padding: clamp(20px, 3vw, 44px);
   transition: all 0.3s ease-in-out;
@@ -641,7 +707,7 @@ sup {
   margin: 15px 0;
   font-size: var(--fs-58);
   color: rgba(var(--white-color), 1);
-  padding-left: 30px
+  padding-left: 30px;
 }
 
 .pricing-card ul {
@@ -655,19 +721,15 @@ sup {
 }
 
 .pricing-card ul li:not(:has(.bi-check-lg)) {
-  color: rgba(var(--white-color), .6);
-
+  color: rgba(var(--white-color), 0.6);
 }
 
-
-
 .pricing-card ul li i {
-  color: #18C967;
+  color: #18c967;
   margin-right: 10px;
   width: 16px;
   display: inline-block;
 }
-
 
 /* footer css----------------------- */
 .footer {
@@ -680,10 +742,6 @@ sup {
   color: rgba(var(--white-color), 1);
   font-size: 16px;
 }
-
-
-
-
 
 /* responsive css */
 
@@ -708,13 +766,11 @@ sup {
 
   .features-slider {
     max-width: calc(100% - 12%);
-
   }
 
   .header-bg.main-wrapper {
     height: auto;
   }
-
 }
 
 @media (max-width: 767.5px) {
